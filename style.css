@@ -1,0 +1,63 @@
+html{
+    background-color: #18191B;
+    font-family: 'Aldrich', sans-serif;
+}
+.pink{
+    color: #EBBAF7;
+}
+.purple{
+    color:#B03DCE;
+}
+.wrapper_title > .size_title_sub{
+    text-align: left;
+    transform: translate(13px, 45px);
+}
+.wrapper_title > .size_title_sub ~ .size_title_sub{
+    text-align: right;
+    transform: translate(-13px, -50px);
+}
+.size_title_sub{
+    font-size: 50px;
+    margin: 0;
+    width: 100%;
+}
+.size_title{
+    margin: 0;
+    font-size: 200px;
+}
+.wrapper_title{
+    width: min-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100 !important;
+}
+.section_title{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.decor_hollowcircle{
+    position: absolute;
+    width: 800px;
+    height: 300px;
+    -moz-border-radius: 363.63px / 150.818px;
+    -webkit-border-radius: 363.63px / 150.818px;
+    border-radius: 363.63px / 150.818px;
+    margin:10px 0 0 -10px;  
+    border: solid 1px #715478;
+}
+.decor_hollowcircle._1{
+    transform: rotate(-12deg);
+}
+.decor_hollowcircle._2{
+    transform: rotate(144deg);
+}
+.decor_hollowcircle._0{
+    transform: rotate(20deg);
+}

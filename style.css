@@ -1,6 +1,9 @@
 html{
     background-color: #18191B;
     font-family: 'Aldrich', sans-serif;
+    overflow-x: hidden;
+    overflow-y: overlay;
+    padding-right: 13px;
 }
 .pink{
     color: #EBBAF7;
@@ -43,6 +46,7 @@ html{
     align-items: center;
 }
 .decor_hollowcircle{
+    transition: transform linear 20s;
     position: absolute;
     width: 800px;
     height: 300px;
@@ -52,12 +56,228 @@ html{
     margin:10px 0 0 -10px;  
     border: solid 1px #715478;
 }
-.decor_hollowcircle._1{
-    transform: rotate(-12deg);
+.section_info{
+    position: absolute;
+    left: 0;
+    top: 100vh;
 }
-.decor_hollowcircle._2{
-    transform: rotate(144deg);
+.left > p, .right > p{
+    opacity: 1;
+    font-size: 30px;
+    width: fit-content;
+    margin-bottom: 0;
 }
-.decor_hollowcircle._0{
-    transform: rotate(20deg);
+.left > p ~ p, .right > p ~ p{
+    opacity: 0.65;
+    font-size: 20px;
+    max-width: 500px;
 }
+.section_normal{
+    margin-top: 70px;
+    width: calc(100vw - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_normal img{
+    height:200px;
+    position: relative;
+}
+.section_normal iframe{
+    z-index: 3;
+}
+.left, .right{
+    max-width: 500px;
+}
+.background{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: repeat;
+    background-image: url("./img/brushed-alum.png");
+    opacity: 0.1;
+}
+.right p{
+    text-align: right;
+    float: right;
+ }
+.purpleBack{
+    background-color: #9A1FFF;
+}
+.darkPurpleBack{
+    background-color: #2B153D;
+}
+.randRot{
+    width: 170px;
+    height: 270px;
+    position: absolute;
+    z-index: 0;
+}
+.container_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section_team{
+    margin-top: 70px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title_team{
+    font-size: 30px;
+}
+.card_team{
+    margin: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.card_team img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: 1px solid #B03DCE;
+}
+.card_team p{
+    margin: 5px;
+    font-size: 20px;
+}
+.container_team{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    
+}
+.card_team:hover{
+    background: radial-gradient(at 0px 0px, rgba(176,61,206,1) 0%, rgba(239,0,255,0) 24%);
+    background-position: top;
+}
+.section_sponsors{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title_sponsors{
+    font-size: 30px;
+}
+.container_sponsors{
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.container_sponsors img{
+    max-height: 100px;
+    max-width: 250px;
+    margin: 5px;
+}
+.section_contact{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+}
+.title_contact{
+    font-size: 30px;
+    margin: 0;
+}
+.desc_contact{
+    opacity: 0.65;
+    max-width: 700px;
+    text-align: center;
+}
+.container_contact{
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card_contact{
+    width: fit-content;
+    background-color: #362442;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+.card_contact img{
+    height: 50px;
+    padding:3px;
+    
+}
+.card_contact p{
+    margin: 0;
+    font-size: 21px;
+    color: #CFCFCF;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #B03DCE;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 5px;
+    cursor: pointer;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #30003d31;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #B03DCE;
+    border-radius: 5px;
+  }
+  .container_decor_hollowcircle{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+  }
+  @media only screen and (max-width:621px){
+    .container_decor_hollowcircle, .wrapper_title{
+        transform: scale(0.5);
+    }
+  }
+  @media only screen and (max-width:800px){
+    .section_normal{
+        flex-direction: column;
+    }
+    .section_normal:has(.left){
+        flex-direction:column-reverse ;
+    }
+    .left p, .right p{
+        float: initial;
+        text-align: center;
+        width: 100vw;
+    }
+    .left, .right{
+        margin-top: 50px;
+    }
+  }
